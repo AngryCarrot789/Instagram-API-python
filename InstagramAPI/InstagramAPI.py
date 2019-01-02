@@ -527,6 +527,7 @@ class InstagramAPI:
             '_uid': self.username_id,
             'caption': caption,
         })
+        clip.close()
         return self.SendRequest('media/configure/?video=1', self.generateSignature(data))
 
     def configure(self, upload_id, photo, caption=''):
